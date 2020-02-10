@@ -1,0 +1,71 @@
+body {
+    
+    background-color: black;
+
+}
+
+/*Jumbotron+carousel */
+
+.jumbo-modif {
+
+padding: 0;
+margin-bottom: 0;
+}
+
+.d-block {
+
+height: 400px;
+filter: brightness(50%);
+
+
+}
+
+.textjumbotron {
+
+    position: absolute;
+    margin-right: 50%;
+    margin-left: 50%;
+    top: 100px;
+    width: 600px; 
+    transform: translateX(-50%);
+    color: white;
+}
+
+.red {
+color: #fe4240;
+
+
+}
+
+
+/*phone contact*/
+
+.phonecontact-modif {
+
+    padding-left: 30px;
+
+
+}
+
+/*social media*/
+
+.socialmedia {
+color: white;
+
+}
+
+
+
+/*subscribe*/
+
+
+
+
+
+/*footer*/
+
+.page-footer {
+
+color: white;
+
+}
