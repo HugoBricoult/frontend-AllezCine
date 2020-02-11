@@ -112,25 +112,23 @@
 
     <!--Contact-->
 
-    <form id="contact-form" method="post" action="" role="form">
+    <div id="contact-form">
 
         <div class="controls">
 
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <label for="form_name">Firstname</label>
-                        <input id="form_name" type="text" name="name" class="form-control"
+                        <label for="form_firstname">Firstname</label>
+                        <input id="form_firstname" type="text" name="firstname" class="form-control"
                             placeholder="Please enter your firstname">
-                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="form_lastname">Lastname</label>
-                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                        <input id="form_lastname" type="text" name="lastname" class="form-control"
                             placeholder="Please enter your lastname">
-                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
@@ -138,17 +136,15 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="form_email">Email</label>
-                        <input id="form_email" type="email" name="email" class="form-control"
+                        <input id="form_email" type="text" name="email" class="form-control"
                             placeholder="Please enter your email">
-                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="form_email">Subject</label>
-                        <input id="form_email" type="email" name="subject" class="form-control"
+                        <input id="form_subject" type="subject" name="subject" class="form-control"
                             placeholder="Please enter your subject">
-                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
@@ -158,16 +154,45 @@
                         <label for="form_message">Message</label>
                         <textarea id="form_message" name="message" class="form-control" placeholder="Message for me"
                             rows="4"></textarea>
-                        <div class="help-block with-errors"></div>
                     </div>
                 </div>
                 <div class="col-s-12">
-                    <input type="submit" class="btn btn-danger btn-send" value="Send message">
+                    <input id="sendmodal" class="btn btn-danger btn-send" value="Send message">
                 </div>
             </div>
         </div>
         </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Vos informations ont bien été enregistrées</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <p class="firstname"></p>
+            <p class="lastname"></p>
+            <p class="email"></p>
+            <p class="subject"></p>
+            <p class="message"></p>
+
+
+
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      
     </form>
 
 
@@ -339,14 +364,13 @@
                 <div class="col-sm-2 mx-auto">
 
                     <!-- Links -->
-                    
+
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><span class="red">Allez</span>Cine</h5>
-                    
+
                     <img class="allezcineimage" style="width: 200px;" src="assets/images/allezcineimg.jpg" alt="">
 
 
 
-                   
 
                 </div>
 
@@ -362,10 +386,10 @@
         <hr>
 
         <!-- Social buttons -->
-        
+
         <div class="footer-text text-center text-uppercase">Connect Us</div>
-            
-      
+
+
         <ul class="list-unstyled list-inline text-center">
             <span class="border border-white m-2 p-2">
                 <li class="list-inline-item">
@@ -394,7 +418,7 @@
             <span class="border border-white m-2 p-2">
                 <li class="list-inline-item">
                     <a class="btn-floating btn-li mx-1">
-                   <i class="fab fa-youtube"></i>
+                        <i class="fab fa-youtube"></i>
                     </a>
                 </li>
             </span>
@@ -410,22 +434,21 @@
 
         <!-- Social buttons -->
 
-        
+
 
         <div class="arrowup">
 
             <a href="#arrowanchor">
 
-<i class="fas fa-arrow-circle-up fa-3x"></i>
+                <i class="fas fa-arrow-circle-up fa-3x"></i>
 
-</a>
+            </a>
 
 
         </div>
 
 
     </footer>
-
 
 
 
