@@ -24,3 +24,13 @@ document.getElementById('sendmodal').addEventListener('click',validation);
 //anchor arrow
 
 
+
+
+let arrowDiv = document.getElementById("arrowup");
+let arrow = document.createElement("a");
+arrow.setAttribute("href","#arrowanchor");
+let iconArrow = document.createElement('i');
+iconArrow.setAttribute('id','iconanchor');
+iconArrow.setAttribute('class','fas fa-arrow-circle-up fa-3x');
+arrow.appendChild(iconArrow);
+arrowDiv.appendChild(arrow);
