@@ -67,6 +67,29 @@ margin-right: auto;
 }
 
 
+/*contactform*/
+
+#contact-form {
+
+    background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+
+}
+
+
+
+/*arrowup*/
+
+.arrowup {
+
+text-align: right
+
+
+
+}
 
 /*footer*/
 
@@ -82,5 +105,12 @@ color: white;
 
     text-decoration: none;
     color: white;
+
+}
+
+.footer-text {
+
+margin-bottom: 15px;
+
 
 }
