@@ -1,4 +1,28 @@
 
+//login modal
+
+function login() {
+
+$('#myModallogin').modal('toggle');
+
+}
+
+document.getElementById('sendmodallogin').addEventListener('click', login);
+
+
+//register modal
+
+function register() {
+
+    $('#myModalregister').modal('toggle');
+    
+    }
+    
+    document.getElementById('sendmodalregister').addEventListener('click', register);
+    
+    
+
+
 //contact form modal
 
 function validation() {
@@ -22,9 +46,6 @@ document.getElementById('sendmodal').addEventListener('click',validation);
 
 
 //anchor arrow
-
-
-
 
 let arrowDiv = document.getElementById("arrowup");
 let arrow = document.createElement("a");
