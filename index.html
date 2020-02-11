@@ -106,74 +106,60 @@
 
     <!--Contact-->
 
-    <div class="container bg-white">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="well well-sm">
-                    <form class="form-horizontal" action="" method="post">
-                        <fieldset>
-                            <legend class="text-center">Contact us</legend>
+    <form id="contact-form" method="post" action="" role="form">
 
-                            <!-- First Name input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="firstname"></label>
-                                <div class="col-md-3">
-                                    <input id="name" name="name" type="text" placeholder="Your first name"
-                                        class="form-control">
-                                </div>
-                            </div>
-
-
-                            <!-- Last Name input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="lastname"></label>
-                                <div class="col-md-3">
-                                    <input id="name" name="name" type="text" placeholder="Your last name"
-                                        class="form-control">
-                                </div>
-                            </div>
-
-
-                            <!-- Subject input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="subject"></label>
-                                <div class="col-md-3">
-                                    <input id="email" name="email" type="text" placeholder="Your subject"
-                                        class="form-control">
-                                </div>
-                            </div>
-
-                            <!-- Email input-->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="email"></label>
-                                <div class="col-md-3">
-                                    <input id="email" name="email" type="text" placeholder="Your email"
-                                        class="form-control">
-                                </div>
-                            </div>
-
-
-                            <!-- Message body -->
-                            <div class="form-group">
-                                <label class="col-md-3 control-label" for="message"></label>
-                                <div class="col-md-9">
-                                    <textarea class="form-control" id="message" name="message"
-                                        placeholder="Please enter your message here..." rows="5"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- Form actions -->
-                            <div class="form-group">
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" class="btn btn-danger">Submit</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+        <div class="messages"></div>
+    
+        <div class="controls">
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Firstname *</label>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_lastname">Lastname *</label>
+                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="form_message">Message *</label>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" class="btn btn-danger btn-send" value="Send message">
+                </div>
+            </div>
+            </div>
         </div>
-    </div>
+    
+    </form>
 
 
 
