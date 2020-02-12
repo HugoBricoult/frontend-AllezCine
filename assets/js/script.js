@@ -9,6 +9,7 @@ let targetshop2;
 let targetshop3;
 let template;
 let template6;
+let listNewFilm;
 let showMoreFilm = true;
 let swiped = 0;
 let getGenre = () => {
@@ -30,7 +31,18 @@ let addMoviesPage2 = () => {
     promisePage2.then(elem => {
         moviesLoaded = moviesLoaded.concat(elem.results);
         loadMovies();
+        addNewMovies();
     });
+}
+let addNewMovies = () => {
+    for (let i = 0; i < 5; i++) {
+        let liList = document.createElement("li");
+        liList.innerHTML = moviesLoaded[i].title;
+        liList.setAttribute("class", "footer-list-new");
+        liList.setAttribute("data-id", moviesLoaded[i].id);
+        listNewFilm.appendChild(liList);
+    }
+    let childs = listNewFilm.querySelectorAll('li');
 }
 let creatElement = (element, temp) => {
     let clone = document.importNode(temp.content, true);
@@ -128,6 +140,7 @@ let showModal = (elem) => {
         let reqInfo = "https://api.themoviedb.org/3/movie/" + filmId + "?api_key=d3b0bee1ea989a8433fdee74feae0b85&language=fr";
         let promiseInfo = fetch(reqInfo).then(rs => rs.json());
         promiseInfo.then(info => {
+            document.getElementById("titreModal").innerHTML = info.title;
             document.getElementById("description").innerHTML = info.overview;
             document.getElementById("anneesorite").innerHTML = info.release_date;
             let g = "";
@@ -272,8 +285,17 @@ let setancre = () => {
         document.getElementById('sendmodallogin').addEventListener('click', login);
         document.getElementById('sendmodalregister').addEventListener('click', register);
         document.getElementById('sendmodal').addEventListener('click', validation);
+        listNewFilm = document.getElementById("list-new-films");
         //Ajout films
         getGenre();
         //anchorArrow
         setancre();
+        window.onscroll = function(val) {
+            if (val.path[1].scrollY == 0) {
+                document.getElementById("arrowup").style.opacity = 0;
+            } else {
+                document.getElementById("arrowup").style.opacity = 1;
+            }
+
+        };
     })();

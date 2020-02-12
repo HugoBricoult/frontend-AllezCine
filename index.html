@@ -67,19 +67,19 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#arrowanchor">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Films</a>
+                    <a class="nav-link" href="#anchorFilms">Films</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Films Vedettes</a>
+                    <a class="nav-link" href="#anchorfeatured">Films Vedettes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Magasin</a>
+                    <a class="nav-link" href="#anchorShop">Magasin</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Nous contacter</a>
+                    <a class="nav-link" href="#achorContact">Nous contacter</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -96,19 +96,19 @@
         <div class="menu-desktop">
             <ul class="menu-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#arrowanchor">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Navigation</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Films</a>
-                        <a class="dropdown-item" href="#">Films Vedettes</a>
-                        <a class="dropdown-item" href="#">Magasin</a>
-                        <a class="dropdown-item" href="#">Nous contacter</a>
+                        <a class="dropdown-item" href="#anchorFilms">Films</a>
+                        <a class="dropdown-item" href="#anchorfeatured">Films Vedettes</a>
+                        <a class="dropdown-item" href="#anchorShop">Magasin</a>
+                        <a class="dropdown-item" href="#achorContact">Nous contacter</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#achorContact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -143,7 +143,7 @@
                             <button type="button" class="btn btn-dark">Ok</button>
                             <button type="button" class="btn btn-dark">Créer un compte</button>
                             <div class="form-group">
-                                <input type="checkbox" id="checkconnexion" name="checkconnexion" checked>
+                                <input type="checkbox" id="" name="checkconnexion" checked>
                                 <label for="checkconnexion">Rester connecté</label>
                             </div>
                             <div class="form-group">
@@ -179,14 +179,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="col-form-label">Password:</label>
-                                <input type="text" class="form-control" id="password">
+                                <input type="text" class="form-control" id="pass">
                             </div>
                             <div class="form-group">
                                 <label for="confirmpassword" class="col-form-label">Confirm your password:</label>
                                 <input type="text" class="form-control" id="confirmpassword">
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" id="checkconnexion" name="checkconnexion" checked>
+                                <input type="checkbox" id="check" name="checkconnexion" checked>
                                 <label for="checkconnexion">Conditions générales d'utilisation</label>
                             </div>
                             <button type="button" class="btn btn-dark">Créer un compte</button>
@@ -200,7 +200,7 @@
         </div>
     </div>
     <!--Section Films-->
-    <section name="Movie" class="movie-container">
+    <section name="Movie" class="movie-container" id="anchorFilms">
         <template id="templateMovie">
             <div data-id="0" id="movieId" class="movies-item-5" name="simpleMovie">
                 <img src="" alt="" class="" width="150px" height="220px" style="border: 1px solid rgb(192, 192, 192);">
@@ -247,7 +247,6 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -255,7 +254,7 @@
     </section>
     <hr class="separateur">
     <!--Film vedettes-->
-    <h2 class="soustitre">Films en vedette</h2>
+    <h2 class="soustitre" id="anchorfeatured">Films en vedette</h2>
     <section name="featured movie" class="vedette-container">
         <div>
             <button id="allmov" onclick="filterByGenre(0)" class="feat-btn">All</button><button id="actionmov" onclick="filterByGenre(1)" class="feat-btn2">Action</button><button id="dramemov" onclick="filterByGenre(2)" class="feat-btn2">Drames</button></div>
@@ -273,7 +272,7 @@
     </section>
     <hr class="separateur">
     <!--Shop movie-->
-    <h2 class="soustitre">Magasin de films</h2>
+    <h2 class="soustitre" id="anchorShop">Magasin de films</h2>
     <section class="shop-movie">
 
         <div><i class="fas fa-angle-left" onclick="swipe(false)"></i><i class="fas fa-angle-right" onclick="swipe(true)"></i></div>
@@ -291,23 +290,24 @@
     <section class="conatinerRes">
         <section class="containerRadio">
             <input type="radio" id="twitter" name="gender" value="male" class="resbtn">
-            <label for="twitter" class="resbtnL t"><span class="txt">Twitter</span> <i class="fab fa-twitter"></i></label><br>
+            <label for="twitter" class="resbtnL t"><span class="txt"><a href="">Twitter</a></span> <i class="fab fa-twitter"></i></label><br>
         </section>
         <section class="containerRadio">
             <input type="radio" id="facebook" name="gender" value="female" class="resbtn">
-            <label for="facebook" class="resbtnL f"><span class="txt">Facebook</span> <i class="fab fa-facebook-f"></i></label><br>
+            <label for="facebook" class="resbtnL f"><span class="txt"><a href="">Facebook</a></span> <i class="fab fa-facebook-f"></i></label><br>
         </section>
         <section class="containerRadio">
             <input type="radio" id="instagram" name="gender" value="other" class="resbtn">
-            <label for="instagram" class="resbtnL i"><span class="txt">Instagram</span> <i class="fab fa-instagram"></i></label><br>
+            <label for="instagram" class="resbtnL i"><span class="txt"><a href="">Instagram</a></span> <i class="fab fa-instagram"></i></label><br>
         </section>
         <section class="containerRadio">
             <input type="radio" id="google" name="gender" value="other" class="resbtn">
-            <label for="google" class="resbtnL g"><span class="txt">Google+</span> <i class="fab fa-google-plus-g"></i></label>
+            <label for="google" class="resbtnL g"><span class="txt"><a href="">Google+</a></span> <i class="fab fa-google-plus-g"></i></label>
         </section>
     </section>
     <hr class="separateur">
     <!--Contacts-->
+    <h2 class="soustitre" id="achorContact">Nous contacter</h2>
     <div id="contact-form" class="contact-form">
         <div class="controls">
             <div class="row">
@@ -351,6 +351,8 @@
             </div>
         </div>
     </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.1076359131794!2d4.446072808736366!3d50.407724157732794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c226734a4303c5%3A0x88bda0c53740cc8b!2zUXVhaTEwIC8gU2FsbGUgQ8O0dMOpIFBhcmM!5e0!3m2!1sfr!2sbe!4v1581503289861!5m2!1sfr!2sbe"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" class="contact-map"></iframe>
     <!-- Modal contact form -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -452,7 +454,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-2 mx-auto">
+                <div class="col-sm-3 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Review Movies</h5>
                     <hr>
@@ -476,25 +478,8 @@
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Latest Movies</h5>
                     <hr>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Movie 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Movie 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Movie 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Movie 4</a>
-                        </li>
-                        <li>
-                            <a href="#!">Movie 5</a>
-                        </li>
-                        <li>
-                            <a href="#!">Movie 6</a>
-                        </li>
+                    <ul class="list-unstyled" id="list-new-films">
+
                     </ul>
                 </div>
                 <!-- Grid column -->
@@ -503,7 +488,7 @@
                 <div class="col-sm-2 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><span class="red">Allez</span>Cine</h5>
-                    <img class="allezcineimage" style="width: 200px;" src="assets/images/allezcineimg.jpg" alt="">
+                    <img class="allezcineimage" style="width: 200px;" src="assets/img/allezcineimg.jpg" alt="">
                 </div>
                 <!-- Grid column -->
             </div>
