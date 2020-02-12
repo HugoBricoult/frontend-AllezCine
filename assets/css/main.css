@@ -1,3 +1,8 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 .body-wrap {
     width: 500px;
     margin-left: auto;
@@ -35,40 +40,42 @@ h1:after {
 .date {
     background-color: #fe4240;
     color: white;
-    width: 100px;
+    width: 200px;
     float: right;
     margin-top: 150px;
+    font-size: x-large;
 }
 
 
-.firstcontent {
-text-align: center;
-
+.firstcontent h3 {
+    width: 400px;
+    background-color: #fe4240;
+    color: white; 
+    padding: 5px;
 }
 
-.firstcontent h2 {
-    color: grey;
-    text-align: left;
-}
 
-.secondcontent {
+.secondcontent h3 {
+    width: 400px;
     background-color: #fe4240;
     color: white;
-    text-align: center;
+    padding: 5px;
 }
 
-.secondcontent h2 {
-    color: white;
-    text-align: left;
+.secondcontent img{
+width: 100px;
+height: 130px;
+margin-left: 40px;
 }
 
-.content-footer img  {
-   padding: 10px;
-   
+
+.content-footer {
+color:gray;
+text-align: center;
 }
 
-#first {
-margin-left:150px ;
 
+.content-footer img {
+    padding: 10px;
 
 }
