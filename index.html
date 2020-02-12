@@ -6,18 +6,226 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!--Jumbotron-->
+    <div class="jumbotron text-sm-center jumbo-modif">
+        <!--Carousel-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/img/test.jpg" alt="">
+                    <div class="textjumbotron">
+                        <h1 class="display-4">Latest <span class="red">On</span>line <span class="red">Mo</span>vies
+                        </h1>
+                        <p class="lead">In space no one can hear your scream.</p>
+                        <p class="lead">
+                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/img/test.jpg" alt="">
+                    <div class="textjumbotron">
+                        <h1 class="display-4">Latest <span class="red">On</span>line <span class="red">Mo</span>vies
+                        </h1>
+                        <p class="lead">In space no one can hear your scream.</p>
+                        <p class="lead">
+                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/img/test.jpg" alt="">
+                    <div class="textjumbotron">
+                        <h1 class="display-4">Latest <span class="red">On</span>line <span class="red">Mo</span>vies
+                        </h1>
+                        <p class="lead">In space no one can hear your scream.</p>
+                        <p class="lead">
+                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Nav-->
+    <div class="menu-mobile">
+        <!-- Collapse button -->
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse menu-menu" id="navbarSupportedContent1">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Films</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Films Vedettes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Magasin</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Nous contacter</a>
+                </li>
+            </ul>
+            <!-- Links -->
+        </div>
+        <!-- Collapsible content -->
+    </div>
+    <button class="navbar-toggler toggler-example menu-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+    <nav class="menu-navigation">
+        <h2><span class="menu-red">ALLEZ</span>CINE!</h2>
+        <!--Menu mobile-->
+
+        <!--menu desktop-->
+        <div class="menu-desktop">
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Navigation</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Films</a>
+                        <a class="dropdown-item" href="#">Films Vedettes</a>
+                        <a class="dropdown-item" href="#">Magasin</a>
+                        <a class="dropdown-item" href="#">Nous contacter</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <input class="form-control menu-search" type="text" placeholder="Recherche" aria-label="Search">
+    <!--Section Films-->
+    <section name="Movie" class="movie-container">
+        <template id="templateMovie">
+            <div data-id="0" id="movieId" class="movies-item-5" name="simpleMovie">
+                <img src="" alt="" class="" width="150px" height="220px" style="border: 1px solid rgb(192, 192, 192);">
+                <h4></h4>
+                <div>
+                    <p id="sortieMovie"></p>
+                    <p id="genreMovie"></p>
+                </div>
+            </div>
+        </template>
+        <template id="templateMovie6">
+            <div data-id="0" id="movieId" class="movies-item-6">
+                <img src="" alt="" class="" width="150px" height="220px" style="border: 1px solid rgb(192, 192, 192);">
+                <h4></h4>
+                <div>
+                    <p id="sortieMovie"></p>
+                    <p id="genreMovie"></p>
+                </div>
+            </div>
+        </template>
+        <div id="movies" class="movies-list">
+        </div>
+        <!--Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="titreModal">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe style="border:none;" width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="videoYT"></iframe>
+                        <br>
+                        <h5>Description</h5>
+                        <p id="description" class="description"></p>
+                        <h5>Date de sortie</h5>
+                        <p id="anneesorite" class="anneesorite"></p>
+                        <h5>Genre</h5>
+                        <p id="genreFilm" class="genre"></p>
+                        <h5>Acteurs</h5>
+                        <p id="acteurs" class="acteurs"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Film vedettes-->
+    <h2 class="soustitre">Films en vedette</h2>
+    <section name="featured movie" class="vedette-container">
+        <div>
+            <button id="allmov" onclick="filterByGenre(0)" class="feat-btn">All</button><button id="actionmov" onclick="filterByGenre(1)" class="feat-btn2">Action</button><button id="dramemov" onclick="filterByGenre(2)" class="feat-btn2">Drames</button></div>
+
+        <div id="featmovie" class="featmovie-div">
+
+        </div>
+        <div id="featmovie2" class="featmovie-div">
+
+        </div>
+        <div id="featmovie3" class="featmovie-div">
+
+        </div>
+        <div><button onclick="showMore()" id="showMore" class="feat-btn">Voir Plus</button></div>
+    </section>
+    <!--Shop movie-->
+    <h2 class="soustitre">Magasin de films</h2>
+    <section class="shop-movie">
+
+        <div><i class="fas fa-angle-left" onclick="swipe(false)"></i><i class="fas fa-angle-right" onclick="swipe(true)"></i></div>
+        <div id="shopmovie" class="featmovie-div">
+
+        </div>
+        <div id="shopmovie2" class="featmovie-div">
+
+        </div>
+        <div id="shopmovie3" class="featmovie-div">
+
+        </div>
+    </section>
+    <!--Réseaux sociaux-->
+    <section class="conatinerRes">
+        <section class="containerRadio">
+            <input type="radio" id="twitter" name="gender" value="male" class="resbtn">
+            <label for="twitter" class="resbtnL t"><span class="txt">Twitter</span> <i class="fab fa-twitter"></i></label><br>
+        </section>
+        <section class="containerRadio">
+            <input type="radio" id="facebook" name="gender" value="female" class="resbtn">
+            <label for="facebook" class="resbtnL f"><span class="txt">Facebook</span> <i class="fab fa-facebook-f"></i></label><br>
+        </section>
+        <section class="containerRadio">
+            <input type="radio" id="instagram" name="gender" value="other" class="resbtn">
+            <label for="instagram" class="resbtnL i"><span class="txt">Instagram</span> <i class="fab fa-instagram"></i></label><br>
+        </section>
+        <section class="containerRadio">
+            <input type="radio" id="google" name="gender" value="other" class="resbtn">
+            <label for="google" class="resbtnL g"><span class="txt">Google+</span> <i class="fab fa-google-plus-g"></i></label>
+        </section>
+    </section>
 
 
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

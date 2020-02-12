@@ -1,0 +1,398 @@
+/*General*/
+
+
+/*nav*/
+
+.menu-navigation {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.menu-navigation h2 {
+    font-weight: bold;
+}
+
+.menu-red {
+    color: #ff4240;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-nav li {
+    background-color: #ff4240;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.menu-nav div {
+    background-color: #ff4240;
+}
+
+.menu-nav a {
+    color: white;
+}
+
+.menu-nav li {
+    list-style-type: none;
+}
+
+.menu-desktop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+}
+
+.menu-mobile {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-search {
+    position: absolute;
+    width: 300px;
+    right: 10px;
+    top: 15px;
+    background-color: rgba(0, 0, 0, 0.425);
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+}
+
+.menu-search::placeholder {
+    color: white;
+}
+
+.menu-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.menu-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*Jumbotron*/
+
+.jumbo-modif {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.d-block {
+    height: 400px;
+    filter: brightness(50%);
+}
+
+.textjumbotron {
+    position: absolute;
+    margin-right: 50%;
+    margin-left: 50%;
+    top: 100px;
+    width: 600px;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.red {
+    color: #fe4240;
+}
+
+
+/*films*/
+
+.movie-container {
+    padding: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.movies-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.movies-item-5 {
+    width: 150px;
+    text-align: center;
+}
+
+.movies-item-5 h4 {
+    margin-top: 10px;
+    font-size: 1.3em;
+}
+
+.movies-item-5 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.movies-item-5 #sortieMovie {
+    font-size: 0.8em;
+}
+
+.movies-item-5 #genreMovie {
+    font-size: 0.8em;
+}
+
+
+/*films vedettes*/
+
+.soustitre {
+    display: block;
+    border-left: 4px solid #ff4240;
+    margin-left: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.featmovie-div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    border-radius: 3px;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.movies-item-6 {
+    width: 150px;
+    text-align: center;
+}
+
+.movies-item-6 h4 {
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.movies-item-6 div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.movies-item-6 #sortieMovie {
+    font-size: 0.8em;
+}
+
+.movies-item-6 #genreMovie {
+    font-size: 0.8em;
+}
+
+.feat-btn {
+    border: 3px solid #fe4240;
+    background-color: #fe4240;
+    color: white;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.feat-btn:hover {
+    background-color: white;
+    color: #fe4240;
+}
+
+.feat-btn2 {
+    border: 3px solid white;
+    background-color: white;
+    color: black;
+    margin-left: 10px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.feat-btn2:hover {
+    border: 3px solid #fe4240;
+    color: #fe4240;
+}
+
+
+/*magasin*/
+
+.shop-movie i {
+    font-size: 2em;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+
+/*contact us*/
+
+
+/*footer*/
+
+
+/*Réseaux sociaux*/
+
+.conatinerRes {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 0;
+    bottom: 100px;
+    left: 0;
+}
+
+.containerRadio {
+    margin-left: -5px;
+    padding-left: 0;
+    height: 50px;
+}
+
+.resbtn {
+    width: 0;
+    height: 0;
+}
+
+.resbtnL {
+    display: flex;
+    flex-direction: row;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.t {
+    background-color: #1ba3ef;
+}
+
+.f {
+    background-color: #3e5f92;
+}
+
+.i {
+    background-color: #f04c8b;
+}
+
+.g {
+    background-color: #e84c3f;
+}
+
+.resbtnL span {
+    display: block;
+    width: 0;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.resbtnL i {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    padding-top: 6px;
+    transform: translateY(17%) translateX(5px);
+}
+
+.containerRadio input:checked~.resbtnL span {
+    width: 100px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-right: 30px;
+}
+
+.containerRadio input:checked~.resbtnL i {
+    transform: translateY(17%) translateX(-5px);
+}
+
+.containerRadio input:checked~.resbtnL {
+    width: auto;
+}
+
+
+/*login*/
+
+
+/*Media Queries*/
+
+@media screen and (min-width: 1024px) {
+    .menu-mobile {
+        display: none;
+    }
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-mobile {
+        display: flex;
+    }
+    .menu-desktop {
+        display: none;
+    }
+    .menu-search {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .movies-list {
+        flex-direction: column;
+    }
+    .movies-item-5 {
+        margin-left: 50%;
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+    .featmovie-div {
+        flex-direction: column;
+    }
+    .movies-item-6 {
+        margin-left: 50%;
+        margin-right: 50%;
+        transform: translateX(-50%);
+    }
+    .textjumbotron {
+        width: 350px;
+        text-align: center;
+    }
+    .d-block {
+        height: 500px;
+    }
+}
