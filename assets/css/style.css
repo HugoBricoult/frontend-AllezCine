@@ -1,5 +1,10 @@
 /*General*/
 
+body {
+    margin-bottom: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /*nav*/
 
@@ -259,8 +264,89 @@
 
 /*contact us*/
 
+.separateur {
+    width: 95%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border: 1px solid #fe4240;
+}
+
+.contact-form {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background-color: lightgray;
+}
+
+.controls {
+    width: auto;
+}
+
+.subscribe {
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.phonecontact-modif {
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.phonecontact-modif button {
+    margin-left: 10px;
+}
+
+.socialmedia {
+    color: white;
+}
+
+#contact-form {
+    background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    z-index: 12;
+}
+
+.search-modif {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*footer*/
+
+footer {
+    background-color: black;
+}
+
+.arrowup {
+    text-align: right;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.page-footer {
+    color: white;
+    background-color: black;
+}
+
+.page-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-text {
+    padding-bottom: 15px;
+}
+
+.footer-fix {
+    margin-bottom: 0;
+}
 
 
 /*Réseaux sociaux*/
@@ -269,9 +355,14 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 0;
+    z-index: 999;
     bottom: 100px;
     left: 0;
+}
+
+.row {
+    width: auto;
+    min-width: 10px;
 }
 
 .containerRadio {
@@ -347,6 +438,10 @@
 
 /*login*/
 
+.phonecontact-modif {
+    padding-left: 30px;
+}
+
 
 /*Media Queries*/
 
@@ -356,6 +451,12 @@
     }
     .menu-btn {
         display: none;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .row {
+        width: 98vw;
     }
 }
 

@@ -199,32 +199,61 @@ let filterByGenre = (genre) => {
 };
 let swipe = (add) => {
 
-        if (add) {
-            swiped++;
-            if (swiped == 3) swiped = 0;
-            targetshop
-            targetshop2
-            targetshop3
-        } else {
-            swiped--;
-            if (swiped == -1) swiped = 2;
-        }
-        if (swiped == 0) {
-            targetshop.style.display = 'flex';
-            targetshop2.style.display = 'none';
-            targetshop3.style.display = 'none';
-        }
-        if (swiped == 1) {
-            targetshop.style.display = 'none';
-            targetshop2.style.display = 'flex';
-            targetshop3.style.display = 'none';
-        }
-        if (swiped == 2) {
-            targetshop.style.display = 'none';
-            targetshop2.style.display = 'none';
-            targetshop3.style.display = 'flex';
-        }
-        if (window.getSelection) { window.getSelection().removeAllRanges(); } else if (document.selection) { document.selection.empty(); }
+    if (add) {
+        swiped++;
+        if (swiped == 3) swiped = 0;
+        targetshop
+        targetshop2
+        targetshop3
+    } else {
+        swiped--;
+        if (swiped == -1) swiped = 2;
+    }
+    if (swiped == 0) {
+        targetshop.style.display = 'flex';
+        targetshop2.style.display = 'none';
+        targetshop3.style.display = 'none';
+    }
+    if (swiped == 1) {
+        targetshop.style.display = 'none';
+        targetshop2.style.display = 'flex';
+        targetshop3.style.display = 'none';
+    }
+    if (swiped == 2) {
+        targetshop.style.display = 'none';
+        targetshop2.style.display = 'none';
+        targetshop3.style.display = 'flex';
+    }
+    if (window.getSelection) { window.getSelection().removeAllRanges(); } else if (document.selection) { document.selection.empty(); }
+}
+let login = () => {
+    $('#myModallogin').modal('toggle');
+}
+let register = () => {
+    $('#myModalregister').modal('toggle');
+}
+let validation = () => {
+    let firstname = document.getElementById("form_firstname").value;
+    let lastname = document.getElementById("form_lastname").value;
+    let email = document.getElementById("form_email").value;
+    let subject = document.getElementById("form_subject").value;
+    let message = document.getElementById("form_message").value;
+    $('#myModal').modal('toggle');
+    document.querySelector(".firstname").innerHTML = firstname;
+    document.querySelector(".lastname").innerHTML = lastname;
+    document.querySelector(".email").innerHTML = email;
+    document.querySelector(".subject").innerHTML = subject;
+    document.querySelector(".message").innerHTML = message;
+}
+let setancre = () => {
+        let arrowDiv = document.getElementById("arrowup");
+        let arrow = document.createElement("a");
+        arrow.setAttribute("href", "#arrowanchor");
+        let iconArrow = document.createElement('i');
+        iconArrow.setAttribute('id', 'iconanchor');
+        iconArrow.setAttribute('class', 'fas fa-arrow-circle-up fa-3x');
+        arrow.appendChild(iconArrow);
+        arrowDiv.appendChild(arrow);
     }
     (() => {
         //load elements
@@ -240,6 +269,11 @@ let swipe = (add) => {
         targetshop2.style.display = 'none';
         targetshop3.style.display = 'none';
         document.getElementById("featmovie2").style.display = 'none';
+        document.getElementById('sendmodallogin').addEventListener('click', login);
+        document.getElementById('sendmodalregister').addEventListener('click', register);
+        document.getElementById('sendmodal').addEventListener('click', validation);
         //Ajout films
         getGenre();
+        //anchorArrow
+        setancre();
     })();
