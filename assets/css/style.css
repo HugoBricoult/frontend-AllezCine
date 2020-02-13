@@ -155,6 +155,10 @@ body {
     padding-left: 10%;
 }
 
+.iframYT {
+    width: 100%;
+}
+
 .movies-list {
     display: flex;
     flex-direction: row;
@@ -392,13 +396,18 @@ footer {
 }
 
 .footer-fix {
-    margin-bottom: 0;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
 }
 
-.footer-fix span {
+.footer-fix li {
+    border: 1px solid white;
     border-radius: 4px;
     display: inline-block;
     width: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .footer-list-new {
@@ -525,7 +534,7 @@ footer {
 }
 
 @media screen and (max-width: 910px) {
-    .row {
+    .expend-row {
         width: 98vw;
     }
 }

@@ -47,7 +47,7 @@ let addNewMovies = () => {
 let creatElement = (element, temp) => {
     let clone = document.importNode(temp.content, true);
     //id
-    let id = clone.querySelector("#movieId");
+    let id = clone.querySelector("section");
     id.setAttribute("data-id", element.id);
     //image
     let image = clone.querySelectorAll("img");
@@ -56,15 +56,15 @@ let creatElement = (element, temp) => {
     let power = clone.querySelectorAll("h4");
     power[0].textContent = element.title;
     //sortieFilm
-    let sortie = clone.querySelector("#sortieMovie");
+    let sortie = clone.querySelectorAll("p");
     let date = new Date(element.release_date);;
-    sortie.textContent = date.getFullYear();
+    sortie[0].textContent = date.getFullYear();
     //genre
-    let genre = clone.querySelector("#genreMovie");
+    let genre = clone.querySelectorAll("p");
     for (let i = 0; i < genresLoaded.length; i++) {
         for (let j = 0; j < element.genre_ids.length; j++) {
             if (element.genre_ids[j] == genresLoaded[i].id) {
-                genre.textContent += genresLoaded[i].name + ' ';
+                genre[1].textContent += genresLoaded[i].name + ' ';
             }
         }
     }
@@ -262,6 +262,7 @@ let setancre = () => {
     let arrowDiv = document.getElementById("arrowup");
     let arrow = document.createElement("a");
     arrow.setAttribute("href", "#arrowanchor");
+    arrow.setAttribute("name", "returnToTop");
     let iconArrow = document.createElement('i');
     iconArrow.setAttribute('id', 'iconanchor');
     iconArrow.setAttribute('class', 'fas fa-arrow-circle-up fa-3x');
@@ -269,7 +270,22 @@ let setancre = () => {
     arrowDiv.appendChild(arrow);
 }
 let newsletter = () => {
-        $('#modalcallaction').modal('toggle');
+    $('#modalcallaction').modal('toggle');
+}
+let showModalVideo = (videotype) => {
+        let video = document.getElementById("vidmodal");
+        switch (videotype) {
+            case 0:
+                video.setAttribute("src", "https://www.youtube.com/embed/EXeTwQWrcwY");
+                break;
+            case 1:
+                video.setAttribute("src", "https://www.youtube.com/embed/zAGVQLHvwOY");
+                break;
+            case 2:
+                video.setAttribute("src", "https://www.youtube.com/embed/WzV6mXIOVl4");
+                break;
+        }
+        $("#modalvideo1").modal('toggle');
     }
     (() => {
         //load elements

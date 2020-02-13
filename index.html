@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="page de films" />
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -12,9 +13,29 @@
 </head>
 
 <body>
+    <!--videolaunch-->
+    <div class="modal" id="modalvideo1" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Trailer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="vidmodal" class="iframYT" width="400" height="315" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Jumbotron-->
     <div class="jumbotron text-sm-center jumbo-modif" id="arrowanchor">
         <!--Carousel-->
+
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,7 +50,7 @@
                         </h1>
                         <p class="lead">In space no one can hear your scream.</p>
                         <p class="lead">
-                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                            <a class="btn btn-danger btn-lg" href="#" role="button" onclick="showModalVideo(0)">Watch trailer</a>
                         </p>
                     </div>
                 </div>
@@ -40,7 +61,7 @@
                         </h1>
                         <p class="lead">In space no one can hear your scream.</p>
                         <p class="lead">
-                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                            <a class="btn btn-danger btn-lg" href="#" role="button" onclick="showModalVideo(1)">Watch trailer</a>
                         </p>
                     </div>
                 </div>
@@ -51,7 +72,7 @@
                         </h1>
                         <p class="lead">In space no one can hear your scream.</p>
                         <p class="lead">
-                            <a class="btn btn-danger btn-lg" href="#" role="button">Watch trailer</a>
+                            <a class="btn btn-danger btn-lg" href="#" role="button" onclick="showModalVideo(2)">Watch trailer</a>
                         </p>
                     </div>
                 </div>
@@ -121,11 +142,11 @@
             <button type="button" id="sendmodallogin" class="btn btn-dark">Login</button>
             <button type="button" id="sendmodalregister" class="btn btn-dark">Register</button></p>
         <!--modallogin-->
-        <div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="myModallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Connexion</h5>
+                        <h5 class="modal-title" id="exampleModalLabel1">Connexion</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -143,7 +164,7 @@
                             <button type="button" class="btn btn-dark">Ok</button>
                             <button type="button" class="btn btn-dark">Créer un compte</button>
                             <div class="form-group">
-                                <input type="checkbox" id="" name="checkconnexion" checked>
+                                <input type="checkbox" name="checkconnexion" checked>
                                 <label for="checkconnexion">Rester connecté</label>
                             </div>
                             <div class="form-group">
@@ -199,27 +220,28 @@
             </div>
         </div>
     </div>
+
     <!--Section Films-->
-    <section name="Movie" class="movie-container" id="anchorFilms">
+    <section class="movie-container" id="anchorFilms">
         <template id="templateMovie">
-            <div data-id="0" id="movieId" class="movies-item-5" name="simpleMovie">
+            <section data-id="0" class="movies-item-5" name="simpleMovie">
                 <img src="" alt="" class="" width="150px" height="220px" style="border: 1px solid rgb(192, 192, 192);">
                 <h4></h4>
                 <div>
-                    <p id="sortieMovie"></p>
-                    <p id="genreMovie"></p>
+                    <p ></p>
+                    <p ></p>
                 </div>
-            </div>
+            </section>
         </template>
         <template id="templateMovie6">
-            <div data-id="0" id="movieId" class="movies-item-6">
+            <section data-id="0" class="movies-item-6">
                 <img src="" alt="" class="" width="150px" height="220px" style="border: 1px solid rgb(192, 192, 192);">
                 <h4></h4>
                 <div>
-                    <p id="sortieMovie"></p>
-                    <p id="genreMovie"></p>
+                    <p ></p>
+                    <p ></p>
                 </div>
-            </div>
+            </section>
         </template>
         <div id="movies" class="movies-list">
         </div>
@@ -234,7 +256,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <iframe style="border:none;" width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="videoYT"></iframe>
+                        <iframe style="border:none;" class="iframYT" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" id="videoYT"></iframe>
                         <br>
                         <h5>Description</h5>
                         <p id="description" class="description"></p>
@@ -254,8 +276,9 @@
     </section>
     <hr class="separateur">
     <!--Film vedettes-->
-    <h2 class="soustitre" id="anchorfeatured">Films en vedette</h2>
-    <section name="featured movie" class="vedette-container">
+
+    <section class="vedette-container">
+        <h2 class="soustitre" id="anchorfeatured">Films en vedette</h2>
         <div>
             <button id="allmov" onclick="filterByGenre(0)" class="feat-btn">All</button><button id="actionmov" onclick="filterByGenre(1)" class="feat-btn2">Action</button><button id="dramemov" onclick="filterByGenre(2)" class="feat-btn2">Drames</button></div>
 
@@ -272,9 +295,9 @@
     </section>
     <hr class="separateur">
     <!--Shop movie-->
-    <h2 class="soustitre" id="anchorShop">Magasin de films</h2>
-    <section class="shop-movie">
 
+    <section class="shop-movie">
+        <h2 class="soustitre" id="anchorShop">Magasin de films</h2>
         <div><i class="fas fa-angle-left" onclick="swipe(false)"></i><i class="fas fa-angle-right" onclick="swipe(true)"></i></div>
         <div id="shopmovie" class="featmovie-div">
 
@@ -287,30 +310,30 @@
         </div>
     </section>
     <!--Réseaux sociaux-->
-    <section class="conatinerRes">
-        <section class="containerRadio">
+    <div class="conatinerRes">
+        <div class="containerRadio">
             <input type="radio" id="twitter" name="gender" value="male" class="resbtn">
             <label for="twitter" class="resbtnL t"><span class="txt"><a href="">Twitter</a></span> <i class="fab fa-twitter"></i></label><br>
-        </section>
-        <section class="containerRadio">
+        </div>
+        <div class="containerRadio">
             <input type="radio" id="facebook" name="gender" value="female" class="resbtn">
             <label for="facebook" class="resbtnL f"><span class="txt"><a href="">Facebook</a></span> <i class="fab fa-facebook-f"></i></label><br>
-        </section>
-        <section class="containerRadio">
+        </div>
+        <div class="containerRadio">
             <input type="radio" id="instagram" name="gender" value="other" class="resbtn">
             <label for="instagram" class="resbtnL i"><span class="txt"><a href="">Instagram</a></span> <i class="fab fa-instagram"></i></label><br>
-        </section>
-        <section class="containerRadio">
+        </div>
+        <div class="containerRadio">
             <input type="radio" id="google" name="gender" value="other" class="resbtn">
             <label for="google" class="resbtnL g"><span class="txt"><a href="">Google+</a></span> <i class="fab fa-google-plus-g"></i></label>
-        </section>
-    </section>
+        </div>
+    </div>
     <hr class="separateur">
     <!--Contacts-->
     <h2 class="soustitre" id="achorContact">Nous contacter</h2>
     <div id="contact-form" class="contact-form">
         <div class="controls">
-            <div class="row">
+            <div class="row expend-row">
                 <div class="col-lg-6 col-md-12">
                     <div class="form-group">
                         <label for="form_firstname">Firstname</label>
@@ -324,7 +347,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row expend-row">
                 <div class="col-lg-6 col-md-12">
                     <div class="form-group">
                         <label for="form_email">Email</label>
@@ -333,12 +356,12 @@
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="form-group">
-                        <label for="form_email">Subject</label>
-                        <input id="form_subject" type="subject" name="subject" class="form-control" placeholder="Please enter your subject">
+                        <label for="form_subject">Subject</label>
+                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Please enter your subject">
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row expend-row">
                 <div class="col-lg-12">
                     <div class="form-group">
                         <label for="form_message">Message</label>
@@ -346,13 +369,14 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
+                    <label for="sendmodal"></label>
                     <input id="sendmodal" class="btn btn-danger btn-send" value="Send message">
                 </div>
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.1076359131794!2d4.446072808736366!3d50.407724157732794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c226734a4303c5%3A0x88bda0c53740cc8b!2zUXVhaTEwIC8gU2FsbGUgQ8O0dMOpIFBhcmM!5e0!3m2!1sfr!2sbe!4v1581503289861!5m2!1sfr!2sbe"
-        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" class="contact-map"></iframe>
+    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.1076359131794!2d4.446072808736366!3d50.407724157732794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c226734a4303c5%3A0x88bda0c53740cc8b!2zUXVhaTEwIC8gU2FsbGUgQ8O0dMOpIFBhcmM!5e0!3m2!1sfr!2sbe!4v1581503289861!5m2!1sfr!2sbe"
+        width="600" height="450" style="border:0;" allowfullscreen="" class="contact-map"></iframe>
     <!-- Modal contact form -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -376,7 +400,6 @@
             </div>
         </div>
     </div>
-    </form>
     <!--Modal subscribe Call to action-->
     <div class="modal" id="modalcallaction" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -401,9 +424,10 @@
         <div class="calltoaction search-modif">
             <p class="subscribe text-danger text-center">Subscribe to us</p>
             <div class="input-group ">
-                <input type="text" class="form-control" placeholder="Enter your email">
+                <label for="enteryouemail"></label>
+                <input type="text" id="enteryouemail" class="form-control" placeholder="Enter your email">
                 <div class="input-group-append ">
-                    <button class="btn btn-danger" type="button">Subscribe</button>
+                    <button class="btn btn-danger" id="sendnewsletter" type="button">Subscribe</button>
                 </div>
             </div>
         </div>
@@ -417,7 +441,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-2 mx-auto">
+                <div class="col-sm-12 col-md-3 col-lg-2 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Release</h5>
                     <hr>
@@ -445,7 +469,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-2 mx-auto">
+                <div class="col-sm-12 col-md-3 col-lg-2 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Movies</h5>
                     <hr>
@@ -473,7 +497,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-3 mx-auto">
+                <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Review Movies</h5>
                     <hr>
@@ -493,7 +517,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-2 mx-auto">
+                <div class="col-sm-12 col-md-6 col-lg-2 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Latest Movies</h5>
                     <hr>
@@ -504,7 +528,7 @@
                 <!-- Grid column -->
                 <hr class="clearfix w-100 d-md-none">
                 <!-- Grid column -->
-                <div class="col-sm-2 mx-auto">
+                <div class="col-sm-12 col-md-6 col-lg-3 mx-auto">
                     <!-- Links -->
                     <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><span class="red">Allez</span>Cine</h5>
                     <img class="allezcineimage" style="width: 200px;" src="assets/img/allezcineimg.jpg" alt="">
@@ -518,41 +542,31 @@
         <!-- Social buttons -->
         <div class="footer-text text-center text-uppercase">Connect Us</div>
         <ul class="list-unstyled list-inline text-center footer-fix">
-            <span class="border border-white m-2 p-2">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-fb mx-1">
-                        <i class="fab fa-facebook-f"> </i>
-                    </a>
-                </li>
-            </span>
-            <span class="border border-white m-2 p-2">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-tw mx-1">
-                        <i class="fab fa-twitter"> </i>
-                    </a>
-                </li>
-            </span>
-            <span class="border border-white m-2 p-2">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-gplus mx-1">
-                        <i class="fab fa-linkedin-in"> </i>
-                    </a>
-                </li>
-            </span>
-            <span class="border border-white m-2 p-2">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-li mx-1">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-            </span>
-            <span class="border border-white m-2 p-2">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-dribbble mx-1">
-                        <i class="fab fa-google-plus-g"> </i>
-                    </a>
-                </li>
-            </span>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                    <i class="fab fa-facebook-f"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i class="fab fa-twitter"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1">
+                    <i class="fab fa-linkedin-in"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                    <i class="fab fa-google-plus-g"> </i>
+                </a>
+            </li>
         </ul>
         <!-- Social buttons -->
         <div id="arrowup" class="arrowup">
@@ -565,7 +579,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-    <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js"></script>
+    <script id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js"></script>
 </body>
 
 </html>
