@@ -45,6 +45,18 @@ document.querySelector(".message").innerHTML = message;
 document.getElementById('sendmodal').addEventListener('click',validation);
 
 
+
+//call to action
+
+function newsletter() {
+
+    $('#modalcallaction').modal('toggle');
+    
+    }
+    
+    document.getElementById('sendnewsletter').addEventListener('click', newsletter);
+
+
 //anchor arrow
 
 let arrowDiv = document.getElementById("arrowup");
