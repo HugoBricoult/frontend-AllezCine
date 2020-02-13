@@ -259,14 +259,17 @@ let validation = () => {
     document.querySelector(".message").innerHTML = message;
 }
 let setancre = () => {
-        let arrowDiv = document.getElementById("arrowup");
-        let arrow = document.createElement("a");
-        arrow.setAttribute("href", "#arrowanchor");
-        let iconArrow = document.createElement('i');
-        iconArrow.setAttribute('id', 'iconanchor');
-        iconArrow.setAttribute('class', 'fas fa-arrow-circle-up fa-3x');
-        arrow.appendChild(iconArrow);
-        arrowDiv.appendChild(arrow);
+    let arrowDiv = document.getElementById("arrowup");
+    let arrow = document.createElement("a");
+    arrow.setAttribute("href", "#arrowanchor");
+    let iconArrow = document.createElement('i');
+    iconArrow.setAttribute('id', 'iconanchor');
+    iconArrow.setAttribute('class', 'fas fa-arrow-circle-up fa-3x');
+    arrow.appendChild(iconArrow);
+    arrowDiv.appendChild(arrow);
+}
+let newsletter = () => {
+        $('#modalcallaction').modal('toggle');
     }
     (() => {
         //load elements
@@ -285,6 +288,7 @@ let setancre = () => {
         document.getElementById('sendmodallogin').addEventListener('click', login);
         document.getElementById('sendmodalregister').addEventListener('click', register);
         document.getElementById('sendmodal').addEventListener('click', validation);
+        document.getElementById('sendnewsletter').addEventListener('click', newsletter);
         listNewFilm = document.getElementById("list-new-films");
         //Ajout films
         getGenre();

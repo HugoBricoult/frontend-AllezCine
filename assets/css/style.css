@@ -93,6 +93,17 @@ body {
     top: 10px;
 }
 
+.menu-link {
+    border: 3px solid #fe4240;
+    transition-duration: 0.3s;
+}
+
+.menu-link:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid #fe4240;
+}
+
 .menu-menu {
     position: absolute;
     top: 50px;
@@ -188,7 +199,7 @@ body {
 .soustitre {
     display: block;
     border-left: 4px solid #ff4240;
-    margin-left: 30px;
+    margin-left: 50px;
     padding-left: 10px;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -235,11 +246,12 @@ body {
     border: 3px solid #fe4240;
     background-color: #fe4240;
     color: white;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-bottom: 30px;
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    transition-duration: 0.3s;
 }
 
 .feat-btn:hover {
@@ -255,6 +267,7 @@ body {
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    transition-duration: 0.3s;
 }
 
 .feat-btn2:hover {
@@ -269,13 +282,24 @@ body {
     font-size: 2em;
     margin-left: 40px;
     margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+    transition-duration: 0.3s;
+}
+
+.shop-movie i:hover {
+    color: #fe4240;
 }
 
 
 /*contact us*/
 
 .separateur {
-    width: 95%;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: auto;
     margin-top: 60px;
     margin-bottom: 60px;
     border: 1px solid #fe4240;
@@ -450,7 +474,7 @@ footer {
     text-align: center;
     background-color: white;
     border-radius: 50%;
-    padding-top: 6px;
+    padding-top: 7px;
     transform: translateY(17%) translateX(5px);
     cursor: pointer;
 }
