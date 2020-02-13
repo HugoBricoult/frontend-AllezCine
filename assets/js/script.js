@@ -1,3 +1,33 @@
+//firstvideojumbotron
+
+function firstvideo() {
+
+    $('#modalvideo1').modal('toggle');
+    
+    }
+    
+    document.getElementById('firstvideo').addEventListener('click', firstvideo);
+
+
+    //secondvideojumbotron
+
+function secondvideo() {
+
+    $('#modalvideo2').modal('toggle');
+    
+    }
+    
+    document.getElementById('secondvideo').addEventListener('click', secondvideo);
+
+  //3videojumbotron
+
+  function threevideo() {
+
+    $('#modalvideo3').modal('toggle');
+    
+    }
+    
+    document.getElementById('3video').addEventListener('click', threevideo);
 
 //login modal
 
