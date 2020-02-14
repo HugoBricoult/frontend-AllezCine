@@ -11,7 +11,6 @@ Composition du groupe: Hugo Bricoult & Angélique Corbisier
     * Partie d'Angélique: quelques problèmes concernant le jumbotron et l'exécution de la Newsletter. 
 
 3. Quelles sont les choses à améliorer: 
-    * la performance du site: elle est relativement "critique";
     * faire des animations lorsqu'on switche au niveau des films;
     * la map doit être revue.
 
